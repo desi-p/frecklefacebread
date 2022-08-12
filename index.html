@@ -6,22 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <title>Freckle Face Bread Co</title>
 </head>
+
 <body>
     <header>
         <h1>Freckle Face Bread, Co</h1>
         <nav>
         <!--nav bar-->
             <ul>
-                <li class="right-justification">About Us</li>
+                <li class="right-justification"><a href="#about-us">About Us</a></li>
                 <li class="right-justification"><a href="#menu-section">Menu</a></li>
-                <li class="right-justification">Order</li>
+                <li class="right-justification"><a href="#order-form">Order</a></li>
             </ul>
         </nav>
     </header>
+
     <!-- images-->
     <section class="main">
         <section  class="photos">
@@ -39,17 +44,38 @@
         <img class="menu-picture" src="img/PricelistSummer.jpg" alt="summer menu">
 
     </section>
+
     <!-- Header -- Orders-->
     <!-- Order form / Email submission -->
-    <section>
-        <h2>Order</h2>
-        <form>
+    <section id="order-section">
+        <h2 id="order">Order</h2>
+        <section id="order-form">
+            <form>
+                <section>
+                    <label for="name">Full Name: </label>
+                    <input type="text" name="name" id="name" required>
+                    <br>
+                    <label for="phone">Phone Number: </label>
+                    <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <br>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required>
+                </section>
+                <br>
+                <label for="comments"></label>
+                <textarea name="comments" id="comments" required rows="10" cols="75" placeholder="Please list the bread item and quantity you would like and we will confirm your order by email. All orders need to be placed 48 hours in advance."></textarea>
+                <br>
+                <button id="submit-button">Order</button>
+            </form>
+            <h4>THIS PRODUCT MAY CONTAIN ALLERGENS.</h4>
 
-        </form>
+            <p>This product was produced at a private residence that is
+                exempt from state licensing and inspection. </p>
+        </section>
     </section>
     <!-- Header -- About Us -->
     <!-- Paragraph About Us-->
-    <section>
+    <section id="about-us">
         <h2>About Us</h2>
         <p>Hi, my name is Sarah, I am a wife, mom, homeschool teacher and now a Baker. My journey into baking began in November of 2021 when a sweet friend gave me some sourdough starter. 
             Overnight, it seems, I went from not being able to bake cookies well to baking various types of sourdough bread. It is something I have truly enjoyed. I have been able to walk this journey with my family by my side.
@@ -63,8 +89,8 @@
     <footer>
         <ul>
             <li>Follow Us</li>
-            <li><img src="#" alt="instagram logo"><a href=#></a></li>
-            <li><img src="#" alt="facebook logo"><a href=#></a></li>
+            <li><a href="https://www.instagram.com/frecklefacebreadco/" target="_blank"><img src="img/Instagram_Glyph_White.png" alt="instagram logo" class="social-media-logo"></a></li>
+            <li><img src="img/f_logo_RGB-White_58.png" alt="facebook logo" class="social-media-logo"><a href=""></a></li>
         </ul>
         <p>Copyright Freckle Face Bread, Co | Made by SW to Tech</p>
     </footer>
